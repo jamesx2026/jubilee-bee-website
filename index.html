@@ -3,164 +3,401 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Jubilee Bee Event Rentals - Wedding claw machine rentals in Vancouver and Lower Mainland, BC. Give your guests a night to remember!">
-  <title>Jubilee Bee Event Rentals | Wedding Claw Machine Rentals Vancouver</title>
+  <title>Jubilee Bee — Wedding Claw Machine Rentals Vancouver</title>
+  <meta name="description" content="Claw machine rentals for weddings in Vancouver and the Lower Mainland. Add excitement to your reception with vintage claw machines, plush prizes, and dedicated staff.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">
-        <img src="img/logo.jpg" alt="Jubilee Bee" height="50">
-      </a>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-brand">Jubilee Bee</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
       </button>
-      <ul class="nav-menu">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="packages.html">Packages</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="btn-nav">Get Quote</a></li>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#packages" class="nav-link">Packages</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <img src="img/logo.jpg" alt="Jubilee Bee Mascot" class="hero-logo">
-      <h1>Give Your Guests a Night to Remember</h1>
-      <p>Wedding claw machine rentals that bring laughter, excitement, and unforgettable photo opportunities to your special day.</p>
-      <div class="hero-buttons">
-        <a href="packages.html" class="btn btn-primary">View Packages</a>
-        <a href="contact.html" class="btn btn-secondary">Get a Quote</a>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content fade-in">
+      <div class="hero-bee">
+        <img src="img/bee-final.png" alt="Jubilee Bee" class="hero-logo-img">
       </div>
+      <p class="hero-tagline">Add Magic to Your Reception</p>
+      <h1 class="hero-heading">The Ultimate Wedding<br>Entertainment.</h1>
+      <p class="hero-sub">Vintage claw machine rentals that bring excitement, laughter, and unforgettable memories to your wedding reception.</p>
+      <a href="#packages" class="btn-primary">View Our Packages</a>
     </div>
-    <div class="hero-bg"></div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
   </section>
 
-  <!-- Introduction Section -->
-  <section class="intro">
+  <!-- INTRO -->
+  <section class="intro" id="intro">
     <div class="container">
-      <div class="intro-grid">
-        <div class="intro-text">
-          <h2>Add Magic to Your Wedding Reception</h2>
-          <p>Imagine your guests gathered around a beautiful vintage claw machine, shrieking with delight as they win plush prizes and capture memorable photos. Jubilee Bee brings the arcade experience to your wedding — elevated, elegant, and exclusively designed for celebrations.</p>
-          <p>Based in Vancouver, we serve the Lower Mainland and beyond. Every detail is handled: delivery, setup, staffing, and cleanup — so you can focus on celebrating.</p>
-          <div class="intro-features">
-            <div class="feature">
-              <span class="feature-icon">🎁</span>
-              <h4>Premium Prizes</h4>
-              <p>High-quality plush prizes perfect for wedding favors</p>
+      <div class="intro-inner fade-in">
+        <div class="section-label">Welcome</div>
+        <h2 class="section-heading">Entertainment Your Guests Will Love</h2>
+        <p class="intro-text">Jubilee Bee brings the thrill of a claw machine to your wedding reception. Our vintage-inspired machines are a guaranteed hit with guests of all ages — from grandmother to flower girl, everyone loves the chance to win a plush prize. We handle everything: delivery, setup, staffing, and pickup. You just celebrate.</p>
+        <div class="divider-floral">
+          <svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 15 Q50 5 100 15 Q150 25 200 15" stroke="#4A2268" stroke-width="1" fill="none" opacity="0.3"/>
+            <circle cx="100" cy="15" r="4" fill="#FFC83C"/>
+            <circle cx="80" cy="13" r="2" fill="#4A2268" opacity="0.3"/>
+            <circle cx="120" cy="17" r="2" fill="#4A2268" opacity="0.3"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="14" width="32" height="26" rx="3" fill="none" stroke="#4A2268" stroke-width="2"/>
+              <path d="M8 20 L24 30 L40 20" fill="none" stroke="#4A2268" stroke-width="2"/>
+              <path d="M18 14 L18 10 Q24 4 30 10 L30 14" fill="none" stroke="#FFC83C" stroke-width="2.5"/>
+              <line x1="24" y1="4" x2="24" y2="10" stroke="#FFC83C" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Premium Prizes</h3>
+          <p>A wide selection of adorable plush toys perfectly themed for weddings. Your guests win genuine prizes they will treasure long after the celebration.</p>
+        </div>
+        <div class="feature-card fade-in" style="transition-delay: 0.15s">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="20" r="10" fill="none" stroke="#4A2268" stroke-width="2"/>
+              <path d="M20 18 Q24 22 28 18" stroke="#FFC83C" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <circle cx="21" cy="17" r="1.5" fill="#4A2268"/>
+              <circle cx="27" cy="17" r="1.5" fill="#4A2268"/>
+              <path d="M18 34 Q24 40 30 34" stroke="#4A2268" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <line x1="24" y1="30" x2="24" y2="34" stroke="#4A2268" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Professional Attendant</h3>
+          <p>A dedicated booth attendant throughout your event, keeping the machine running smoothly and helping guests try their luck.</p>
+        </div>
+        <div class="feature-card fade-in" style="transition-delay: 0.3s">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="20" width="36" height="22" rx="3" fill="none" stroke="#4A2268" stroke-width="2"/>
+              <path d="M6 26 L42 26" stroke="#4A2268" stroke-width="1.5"/>
+              <path d="M16 8 L24 20 L32 8" fill="none" stroke="#FFC83C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="24" cy="33" r="3" fill="#FFC83C" opacity="0.7"/>
+            </svg>
+          </div>
+          <h3>Elegant Setup</h3>
+          <p>Stunning displays designed to complement your wedding aesthetic. We handle delivery, setup, and breakdown — you simply enjoy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section class="packages-section" id="packages">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">Our Packages</div>
+        <h2 class="section-heading">Choose Your Experience</h2>
+        <p class="section-sub">Two packages designed to make your wedding reception unforgettable.</p>
+      </div>
+      <div class="packages-grid">
+        <!-- Premium -->
+        <div class="package-card fade-in">
+          <div class="package-badge">Premium</div>
+          <div class="package-price">$1,699</div>
+          <p class="package-tagline">Unlimited plays, zero limits</p>
+          <ul class="package-features">
+            <li>Unlimited plays</li>
+            <li>Up to 4 hours of playtime</li>
+            <li>50 premium plush toys to win</li>
+            <li>More plushies can be added</li>
+            <li>Your choice of themes</li>
+            <li>Free booth attendant</li>
+            <li>Free delivery and setup</li>
+          </ul>
+          <a href="#contact" class="btn-outline">Get Started</a>
+        </div>
+        <!-- ALL YOU CAN PLAY -->
+        <div class="package-card featured fade-in" style="transition-delay: 0.15s">
+          <div class="package-badge featured-badge">Most Popular</div>
+          <div class="package-price">$1,999</div>
+          <p class="package-tagline">All out fun</p>
+          <ul class="package-features">
+            <li>Unlimited plush toys included</li>
+            <li>Unlimited plays</li>
+            <li>Up to 5 hours of playtime</li>
+            <li>Your choice of themes</li>
+            <li>Free booth attendant</li>
+            <li>Free delivery and setup</li>
+          </ul>
+          <a href="#contact" class="btn-primary">Get Started</a>
+        </div>
+        <!-- CUSTOM -->
+        <div class="package-card fade-in" style="transition-delay: 0.3s">
+          <div class="package-badge">Custom</div>
+          <div class="package-price">Let's Talk</div>
+          <p class="package-tagline">Build your dream package</p>
+          <ul class="package-features">
+            <li>Fully customized setup</li>
+            <li>Multiple claw machines</li>
+            <li>Extended hours available</li>
+            <li>Themed decorations</li>
+            <li>Custom plush selection</li>
+            <li>Dedicated attendant</li>
+            <li>Contact us for a quote</li>
+          </ul>
+          <a href="#contact" class="btn-outline">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="testimonials-inner fade-in">
+        <div class="section-label">Kind Words</div>
+        <h2 class="section-heading">From Couples Like You</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <p class="testimonial-quote">"The claw machine was the highlight of our reception! Every single guest wanted to try — from kids to grandparents. Such a unique touch."</p>
+            <p class="testimonial-author">— Sarah & Michael, Vancouver</p>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-quote">"We were nervous about adding something different but Jubilee Bee delivered beyond our expectations. Worth every penny for the smiles it created."</p>
+            <p class="testimonial-author">— Jenna & David, Victoria</p>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-quote">"The attendant was so professional and the machine was beautifully decorated. Our guests are still talking about it months later!"</p>
+            <p class="testimonial-author">— The Park Family, Kelowna</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">Gallery</div>
+        <h2 class="section-heading">Moments We've Helped Create</h2>
+        <p class="section-sub">Real weddings where Jubilee Bee brought the buzz.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item fade-in"><img src="img/wedding-1.jpg" alt="Wedding reception setup" loading="lazy"></div>
+        <div class="gallery-item fade-in" style="transition-delay: 0.08s"><img src="img/wedding-2.jpg" alt="Claw machine at wedding" loading="lazy"></div>
+        <div class="gallery-item fade-in" style="transition-delay: 0.16s"><img src="img/wedding-3.jpg" alt="Wedding detail" loading="lazy"></div>
+        <div class="gallery-item fade-in" style="transition-delay: 0.08s"><img src="img/wedding-4.jpg" alt="Wedding celebration" loading="lazy"></div>
+        <div class="gallery-item fade-in" style="transition-delay: 0.16s"><img src="img/wedding-5.jpg" alt="Wedding celebration" loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="img/DSC_0327.jpg" alt="Wedding table arrangement" loading="lazy"></div>
+        <div class="gallery-item fade-in" style="transition-delay: 0.08s"><img src="img/DSC_0345.jpg" alt="Wedding setup" loading="lazy"></div>
+        <div class="gallery-item fade-in" style="transition-delay: 0.16s"><img src="img/DSC_0354.jpg" alt="Wedding setup" loading="lazy"></div>
+        <div class="gallery-item fade-in" style="transition-delay: 0.08s"><img src="img/DSC_0398.jpg" alt="Celebration details" loading="lazy"></div>
+        <div class="gallery-item fade-in" style="transition-delay: 0.16s"><img src="img/DSC_0409.jpg" alt="Wedding styling" loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="img/DSC_0416.jpg" alt="Wedding detail" loading="lazy"></div>
+        <div class="gallery-item fade-in" style="transition-delay: 0.08s"><img src="img/DSC_2700.jpg" alt="Wedding celebration" loading="lazy"></div>
+        <div class="gallery-item fade-in" style="transition-delay: 0.16s"><img src="img/DSC_2729.jpg" alt="Elegant setup" loading="lazy"></div>
+        <div class="gallery-item fade-in" style="transition-delay: 0.08s"><img src="img/DSC_2761.jpg" alt="Wedding detail" loading="lazy"></div>
+        <div class="gallery-item fade-in" style="transition-delay: 0.16s"><img src="img/DSC_2785.jpg" alt="Wedding reception" loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="img/wedding-6.jpg" alt="Wedding event" loading="lazy"></div>
+        <div class="gallery-item fade-in" style="transition-delay: 0.08s"><img src="img/wedding-7.jpg" alt="Celebration setup" loading="lazy"></div>
+        <div class="gallery-item fade-in" style="transition-delay: 0.16s"><img src="img/wedding-8.jpg" alt="Wedding styling" loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="img/wedding-10.jpg" alt="Final celebration" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-text fade-in">
+          <div class="section-label">Our Story</div>
+          <h2 class="section-heading">About Jubilee Bee</h2>
+          <p>Jubilee Bee was born from a simple belief: your wedding guests deserve more than just watching. We bring the excitement of a claw machine to your celebration — a unique, interactive experience that gets everyone involved and creates lasting memories.</p>
+          <p>Our name evokes both the richness of a golden celebration — a jubilee — and the gentle, industrious spirit of the bee: purposeful, collaborative, and always creating something sweet.</p>
+          <div class="about-values">
+            <div class="value-item">
+              <h4>🎯 Non-Stop Fun</h4>
+              <p>Unlimited plays mean non-stop entertainment throughout your reception.</p>
             </div>
-            <div class="feature">
-              <span class="feature-icon">🎩</span>
-              <h4>Professional Attendant</h4>
-              <p>Dedicated staff to ensure everything runs smoothly</p>
+            <div class="value-item">
+              <h4>✨ Elegant Setup</h4>
+              <p>Decorated to complement your wedding aesthetic, not clash with it.</p>
             </div>
-            <div class="feature">
-              <span class="feature-icon">✨</span>
-              <h4>Elegant Setup</h4>
-              <p>Decorated to complement your wedding aesthetic</p>
+            <div class="value-item">
+              <h4>💜 Stress-Free</h4>
+              <p>We handle everything — delivery, setup, staffing, and pickup.</p>
             </div>
           </div>
         </div>
-        <div class="intro-image">
-          <img src="img/wedding-1.jpg" alt="Wedding claw machine setup" loading="lazy">
+        <div class="about-image fade-in" style="transition-delay: 0.2s">
+          <div class="about-image-frame">
+            <svg viewBox="0 0 300 360" xmlns="http://www.w3.org/2000/svg" class="about-bee-illustration">
+              <rect width="300" height="360" fill="#F8F3EC"/>
+              <!-- Floral corners -->
+              <circle cx="30" cy="30" r="18" fill="#4A2268" opacity="0.08"/>
+              <circle cx="270" cy="30" r="18" fill="#4A2268" opacity="0.08"/>
+              <circle cx="30" cy="330" r="18" fill="#4A2268" opacity="0.08"/>
+              <circle cx="270" cy="330" r="18" fill="#4A2268" opacity="0.08"/>
+              <!-- Large bee mascot -->
+              <ellipse cx="150" cy="160" rx="55" ry="45" fill="#FFC83C" opacity="0.15"/>
+              <ellipse cx="150" cy="155" rx="45" ry="36" fill="#4A2268"/>
+              <!-- Stripes -->
+              <path d="M108 145 Q150 140 192 145" stroke="#FFC83C" stroke-width="8" fill="none" opacity="0.8"/>
+              <path d="M108 160 Q150 155 192 160" stroke="#FFC83C" stroke-width="8" fill="none" opacity="0.8"/>
+              <!-- Head -->
+              <ellipse cx="150" cy="115" rx="28" ry="24" fill="#4A2268"/>
+              <!-- Antennae -->
+              <path d="M138 96 Q128 70 118 60" stroke="#4A2268" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <path d="M162 96 Q172 70 182 60" stroke="#4A2268" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <circle cx="118" cy="58" r="5" fill="#FFC83C"/>
+              <circle cx="182" cy="58" r="5" fill="#FFC83C"/>
+              <!-- Eyes -->
+              <circle cx="140" cy="110" r="5" fill="#FFFDF8"/>
+              <circle cx="160" cy="110" r="5" fill="#FFFDF8"/>
+              <circle cx="141" cy="109" r="2" fill="#4A2268"/>
+              <circle cx="161" cy="109" r="2" fill="#4A2268"/>
+              <!-- Smile -->
+              <path d="M140 124 Q150 132 160 124" stroke="#FFFDF8" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <!-- Wings -->
+              <ellipse cx="115" cy="135" rx="28" ry="18" fill="#FFFDF8" opacity="0.35" transform="rotate(-20 115 135)"/>
+              <ellipse cx="185" cy="135" rx="28" ry="18" fill="#FFFDF8" opacity="0.35" transform="rotate(20 185 135)"/>
+              <!-- Stinger -->
+              <path d="M150 200 L142 220 L158 220 Z" fill="#4A2268"/>
+              <!-- Legs -->
+              <path d="M118 175 L100 190" stroke="#4A2268" stroke-width="3" stroke-linecap="round"/>
+              <path d="M118 185 L98 200" stroke="#4A2268" stroke-width="3" stroke-linecap="round"/>
+              <path d="M182 175 L200 190" stroke="#4A2268" stroke-width="3" stroke-linecap="round"/>
+              <path d="M182 185 L202 200" stroke="#4A2268" stroke-width="3" stroke-linecap="round"/>
+              <!-- Bottom text -->
+              <text x="150" y="280" text-anchor="middle" font-family="Playfair Display, serif" font-size="22" fill="#4A2268" font-style="italic">Jubilee Bee</text>
+              <text x="150" y="305" text-anchor="middle" font-family="Lato, sans-serif" font-size="11" fill="#4A2268" opacity="0.6" letter-spacing="3">CLAW MACHINES</text>
+              <path d="M90 320 Q150 312 210 320" stroke="#FFC83C" stroke-width="1.5" fill="none"/>
+            </svg>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Featured Photos Grid -->
-  <section class="featured-photos">
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
     <div class="container">
-      <h2 class="section-title">Recent Events</h2>
-      <p class="section-subtitle">Captured moments from weddings we've been honored to be part of</p>
-      <div class="photo-grid">
-        <div class="photo-item"><img src="img/wedding-1.jpg" alt="Wedding event photo" loading="lazy"></div>
-        <div class="photo-item"><img src="img/wedding-2.jpg" alt="Wedding event photo" loading="lazy"></div>
-        <div class="photo-item"><img src="img/wedding-3.jpg" alt="Wedding event photo" loading="lazy"></div>
-        <div class="photo-item"><img src="img/wedding-4.jpg" alt="Wedding event photo" loading="lazy"></div>
-        <div class="photo-item"><img src="img/wedding-5.jpg" alt="Wedding event photo" loading="lazy"></div>
-        <div class="photo-item"><img src="img/wedding-6.jpg" alt="Wedding event photo" loading="lazy"></div>
-        <div class="photo-item"><img src="img/wedding-7.jpg" alt="Wedding event photo" loading="lazy"></div>
-        <div class="photo-item"><img src="img/wedding-8.jpg" alt="Wedding event photo" loading="lazy"></div>
-        <div class="photo-item"><img src="img/wedding-10.jpg" alt="Wedding event photo" loading="lazy"></div>
-      </div>
-      <div class="section-cta">
-        <a href="gallery.html" class="btn btn-primary">View Full Gallery</a>
+      <div class="contact-inner">
+        <div class="contact-info fade-in">
+          <div class="section-label">Get in Touch</div>
+          <h2 class="section-heading">Let's Make Your Wedding Unforgettable</h2>
+          <p>Ready to add excitement to your reception? Fill out the form and we'll be in touch within 24 hours to check availability for your date.</p>
+          <div class="contact-details">
+            <div class="contact-detail">
+              <strong>Based in</strong>
+              <span>British Columbia, Canada</span>
+            </div>
+            <div class="contact-detail">
+              <strong>Email</strong>
+              <span>hello@jubileebee.ca</span>
+            </div>
+            <div class="contact-detail">
+              <strong>Serving</strong>
+              <span>Metro Vancouver, Vancouver Island & Beyond</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form fade-in" style="transition-delay: 0.2s" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Full name" required>
+            </div>
+            <div class="form-group">
+              <label for="partner">Partner's Name</label>
+              <input type="text" id="partner" name="partner" placeholder="Partner's name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000">
+          </div>
+          <div class="form-group">
+            <label for="date">Wedding Date</label>
+            <input type="date" id="date" name="date">
+          </div>
+          <div class="form-group">
+            <label for="venue">Venue / Location</label>
+            <input type="text" id="venue" name="venue" placeholder="Venue name or city">
+          </div>
+          <div class="form-group">
+            <label for="guests">Estimated Guest Count</label>
+            <select id="guests" name="guests">
+              <option value="">Please select</option>
+              <option value="under-50">Under 50</option>
+              <option value="50-100">50 – 100</option>
+              <option value="100-200">100 – 200</option>
+              <option value="200+">200+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="package">Interested Package</label>
+            <select id="package" name="package">
+              <option value="">Not sure yet</option>
+              <option value="premium">Premium — $1,699</option>
+              <option value="all-you-can-play">All You Can Play — $1,999</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="message">Tell Us About Your Vision</label>
+            <textarea id="message" name="message" rows="4" placeholder="Share any details about your wedding style, special requests, or questions..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full">Send Inquiry</button>
+          <p class="form-note">We typically respond within 24 hours. No obligation — just a friendly conversation about your day.</p>
+        </form>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="testimonials">
-    <div class="container">
-      <h2 class="section-title">Love Letters</h2>
-      <p class="section-subtitle">What couples are saying about their Jubilee Bee experience</p>
-      <div class="testimonial-grid">
-        <div class="testimonial">
-          <div class="testimonial-quote">"Our guests couldn't stop talking about the claw machine! It was the highlight of our reception. Gillian and her team were absolute professionals."</div>
-          <div class="testimonial-author">— Sarah & Michael, North Vancouver</div>
-        </div>
-        <div class="testimonial">
-          <div class="testimonial-quote">"We were hesitant at first, but it turned out to be the best decision. Kids and adults alike were obsessed. The prizes were so cute and fit perfectly with our theme!"</div>
-          <div class="testimonial-author">— Jennifer & David, Richmond</div>
-        </div>
-        <div class="testimonial">
-          <div class="testimonial-quote">"From setup to takedown, everything was seamless. The attendant was lovely and kept the machine running perfectly all night. Highly recommend!"</div>
-          <div class="testimonial-author">— Amanda & Chris, Surrey</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-content">
-        <img src="img/logo.jpg" alt="Jubilee Bee" class="cta-logo">
-        <h2>Ready to Make Your Wedding Unforgettable?</h2>
-        <p>Let's chat about bringing the magic to your special day.</p>
-        <a href="contact.html" class="btn btn-accent">Request a Quote</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
+      <div class="footer-inner">
         <div class="footer-brand">
-          <img src="img/logo.jpg" alt="Jubilee Bee" height="40">
-          <p>Wedding claw machine rentals serving Vancouver & Lower Mainland</p>
+          <p class="footer-name">Jubilee Bee</p>
+          <p class="footer-tagline">Claw Machine Rentals for Weddings & Events</p>
         </div>
         <div class="footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="packages.html">Packages</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h4>Get in Touch</h4>
-          <p>Email: hello@jubileebee.ca</p>
-          <p>Serving: Vancouver, Richmond, Surrey, Burnaby & beyond</p>
+          <a href="#home">Home</a>
+          <a href="#packages">Packages</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Jubilee Bee Event Rentals. Made with love in Vancouver, BC.</p>
+        <p>&copy; 2026 Jubilee Bee. All rights reserved. Based in British Columbia.</p>
       </div>
     </div>
   </footer>
