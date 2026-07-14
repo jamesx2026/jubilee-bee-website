@@ -912,6 +912,31 @@ h1, h2, h3, h4 {
 
 .footer-links a:hover { color: var(--gold); }
 
+.footer-social {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.footer-social .social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.footer-social .social-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-social .social-link:hover {
+  color: var(--gold);
+}
+
 .footer-bottom {
   text-align: center;
   font-size: 0.78rem;
