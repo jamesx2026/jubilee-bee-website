@@ -1,0 +1,9 @@
+# robots.txt for jubileebee.ca
+# Allow all well-behaved crawlers. Block obviously bad ones.
+
+User-agent: *
+Allow: /
+Disallow: /cdn-cgi/
+
+# Pointer to sitemap
+Sitemap: https://jubileebee.ca/sitemap.xml

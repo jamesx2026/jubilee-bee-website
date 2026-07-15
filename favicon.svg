@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#4C433A"/>
+  <!-- Stylised bee silhouette (simple, friendly) -->
+  <g transform="translate(32 32)">
+    <ellipse cx="0" cy="4" rx="14" ry="11" fill="#FFC83C"/>
+    <rect x="-14" y="-2" width="28" height="3" fill="#4C433A"/>
+    <rect x="-14" y="4" width="28" height="3" fill="#4C433A"/>
+    <!-- wings -->
+    <ellipse cx="-9" cy="-7" rx="7" ry="5" fill="#FFFCF7" opacity="0.85"/>
+    <ellipse cx="9" cy="-7" rx="7" ry="5" fill="#FFFCF7" opacity="0.85"/>
+    <!-- antennae -->
+    <path d="M -4 -10 L -7 -15" stroke="#4C433A" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <path d="M 4 -10 L 7 -15" stroke="#4C433A" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <circle cx="-7" cy="-15" r="1.5" fill="#4C433A"/>
+    <circle cx="7" cy="-15" r="1.5" fill="#4C433A"/>
+  </g>
+</svg>
