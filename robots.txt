@@ -1,5 +1,6 @@
 # robots.txt for jubileebee.ca
-# Allow all well-behaved crawlers. Block obviously bad ones.
+# Allow all well-behaved crawlers (including LLM/AI bots).
+# Block obviously bad ones.
 
 User-agent: *
 Allow: /
@@ -7,3 +8,6 @@ Disallow: /cdn-cgi/
 
 # Pointer to sitemap
 Sitemap: https://jubileebee.ca/sitemap.xml
+
+# LLM-readable structured summary (https://llmstxt.org)
+# Convention: LLMs know to look for /llms.txt at the root.

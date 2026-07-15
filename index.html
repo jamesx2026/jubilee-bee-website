@@ -19,6 +19,7 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+<link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable summary" />
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" />
@@ -29,7 +30,10 @@
 <meta property="og:url" content="https://jubileebee.ca/" />
 <meta property="og:title" content="Jubilee Bee — Claw Machine Rentals for Weddings &amp; Events" />
 <meta property="og:description" content="An elegant claw machine rental experience for weddings, parties & celebrations across British Columbia. Curated plush keepsakes, white-glove service." />
-<meta property="og:image" content="https://jubileebee.ca/assets/wedding-7.jpg" />
+<meta property="og:image" content="https://jubileebee.ca/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Jubilee Bee Event Rentals — a little buzz for every celebration" />
 <meta property="og:locale" content="en_CA" />
 <meta property="og:site_name" content="Jubilee Bee Event Rentals" />
 
@@ -37,7 +41,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Jubilee Bee — Claw Machine Rentals for Weddings &amp; Events" />
 <meta name="twitter:description" content="An elegant claw machine rental experience for weddings, parties & celebrations across British Columbia." />
-<meta name="twitter:image" content="https://jubileebee.ca/assets/wedding-7.jpg" />
+<meta name="twitter:image" content="https://jubileebee.ca/og-image.jpg" />
 
 <!-- JSON-LD Structured Data -->
 <script type="application/ld+json">
@@ -130,6 +134,47 @@
       }
     ]
   }
+}
+</script>
+
+<!-- Organization + founder: GEO entity attribution for LLM citation -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://jubileebee.ca/#organization",
+  "name": "Jubilee Bee Event Rentals",
+  "alternateName": "Jubilee Bee",
+  "url": "https://jubileebee.ca",
+  "logo": "https://jubileebee.ca/og-image.jpg",
+  "image": "https://jubileebee.ca/og-image.jpg",
+  "description": "Wedding and event claw machine rental service in Vancouver, British Columbia. Premium plush prizes, professional attendant, full delivery and setup.",
+  "foundingDate": "2024",
+  "founder": {
+    "@id": "https://jubileebee.ca/#founder"
+  },
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+1-778-713-6988",
+    "contactType": "customer service",
+    "email": "jingyang14@gmail.com",
+    "areaServed": { "@type": "AdministrativeArea", "name": "British Columbia, Canada" },
+    "availableLanguage": ["English"]
+  }],
+  "sameAs": [
+    "https://instagram.com/jubileebee_events"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://jubileebee.ca/#founder",
+  "name": "Jingyang Yang",
+  "jobTitle": "Founder",
+  "worksFor": { "@id": "https://jubileebee.ca/#organization" },
+  "url": "https://jubileebee.ca"
 }
 </script>
 

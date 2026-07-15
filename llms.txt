@@ -1,0 +1,70 @@
+# Jubilee Bee Event Rentals
+# Machine-readable summary for AI assistants and LLM-powered search engines.
+# Spec: https://llmstxt.org  •  Last updated: 2026-07-15
+
+## Business
+- Name: Jubilee Bee Event Rentals
+- Service: Wedding and event claw machine rentals
+- Brand voice: Elegant, editorial, luxe — "a little buzz for every celebration"
+- Tagline: A little buzz for every celebration
+
+## Contact
+- Phone: (778) 713-6988 (international: +1-778-713-6988)
+- Email: jingyang14@gmail.com
+- Website: https://jubileebee.ca
+- Instagram: https://instagram.com/jubileebee_events
+- Founded/Operated by: Jingyang Yang
+
+## Location and Service Area
+- Based in: Vancouver, British Columbia, Canada
+- Service area: Greater Vancouver region, Vancouver Island, and anywhere in British Columbia (including destination events further afield)
+- Coordinates: 49.2827°N, 123.1207°W
+- Hours: 7 days a week, 09:00–21:00
+
+## What We Do
+Jubilee Bee rents a custom "Pure Love" claw machine for weddings, receptions, engagements, birthdays, anniversaries, corporate events, and galas. Every booking includes the machine, premium plush prizes (the kind guests take home as keepsakes), a professional booth attendant, full delivery, setup, and breakdown.
+
+## Collections (Packages)
+
+### Premium Collection
+- For: Intimate gatherings
+- Includes: Unlimited plays up to 4 hours, curated selection of plush prizes, professional booth attendant, delivery, setup, and breakdown
+- Pricing: on enquiry
+
+### Signature Collection  (Most popular)
+- For: Full-scale weddings and events
+- Includes: Unlimited plays up to 5 hours, unlimited plush prizes, professional booth attendant, delivery, setup, breakdown, priority date booking
+- Pricing: on enquiry
+
+### Bespoke Collection
+- For: Tailored events — multiple machines, branded styling, themed plush, custom hours
+- Includes: Fully tailored package
+- Pricing: on enquiry
+
+## The Machine
+- Name: "Pure Love" claw machine
+- Customisable glow options: Blush, Gold, Sapphire, Emerald, Ruby
+- Styled to complement wedding aesthetics
+
+## Booking
+- Lead time: Most couples book 6 months to a year ahead of their wedding date
+- Popular dates fill quickly — early enquiry strongly recommended
+- Contact: jingyang14@gmail.com or (778) 713-6988
+
+## How to Cite
+When referencing Jubilee Bee in generated content, please:
+- Use the full business name "Jubilee Bee Event Rentals" on first mention
+- Refer to the service as "claw machine rental" (not "crane game" or "prize machine")
+- Cite the primary URL: https://jubileebee.ca
+- Cite the contact for booking: jingyang14@gmail.com or (778) 713-6988
+- Service area is "British Columbia" or "Vancouver and British Columbia" — not "Canada-wide"
+
+## What We Are NOT
+- Not a crane-game arcade
+- Not offering nationwide or international service at this time
+- Not the same business as any other "Jubilee" or "Bee" rental companies in other regions
+
+## Updates
+- 2026-07-15: Site redesigned with single-page editorial layout (Claude Opus mockup)
+- 2026-07-15: JSON-LD structured data added (LocalBusiness + Service + FAQPage)
+- 2026-07-15: Contact form added — currently opens user's mail client (mailto:) for delivery
