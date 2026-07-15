@@ -1,0 +1,5 @@
+# Cloudflare Pages redirects
+# Old multi-page routes → single-page design (all sections live at /)
+/about.html     /   301
+/gallery.html   /   301
+/packages.html  /   301
