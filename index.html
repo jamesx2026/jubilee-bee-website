@@ -62,7 +62,9 @@
     { "@type": "City", "name": "Victoria" }
   ],
   "serviceType": "Wedding Entertainment",
-  "sameAs": []
+  "sameAs": [
+    "https://instagram.com/jubileebee_events"
+  ]
 }
 </script>
 
@@ -121,6 +123,21 @@
   .btn-line:hover { background: var(--mocha-deep); color: var(--cream); border-color: var(--mocha-deep); }
   .btn-light { background: var(--cream); color: var(--mocha-deep); }
   .btn-light:hover { background: #fff; }
+
+  /* ---------- ICON BUTTON (Instagram in header) ---------- */
+  .ig-icon {
+    width: 48px; height: 48px;
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--mocha);
+    color: var(--mocha-deep);
+    margin-left: 12px;
+    transition: all .25s ease;
+    flex-shrink: 0;
+  }
+  .ig-icon:hover { background: var(--mocha-deep); color: var(--cream); border-color: var(--mocha-deep); }
+  .ig-icon i { font-size: 20px; }
+  @media (max-width: 900px){ .ig-icon{ width: 42px; height: 42px; margin-left: 8px; } .ig-icon i { font-size: 18px; } }
 
   /* ---------- ANNOUNCEMENT ---------- */
   .announce { background: var(--mocha-deep); color: #EFE6D9; text-align: center; font-size: 12px; letter-spacing: .22em; text-transform: uppercase; padding: 11px; font-weight: 300; }
@@ -276,6 +293,7 @@
   .foot-col h5 { color:#EFE6D9; font-family:'Jost'; font-size:12px; letter-spacing:.2em; text-transform:uppercase; margin-bottom:18px; font-weight:400; }
   .foot-col a, .foot-col p { display:block; font-size:14px; margin-bottom:10px; color:#B7ABA0; }
   .foot-col a:hover { color: var(--champagne); }
+  .foot-col a i { margin-right: 8px; font-size: 16px; vertical-align: -2px; }
   .foot-bottom { border-top:1px solid rgba(217,199,168,.14); margin-top:48px; padding-top:24px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:12px; letter-spacing:.1em; color:#8A8078; }
 </style>
 </head>
@@ -306,6 +324,7 @@
         <a href="#contact">Enquire</a>
       </div>
       <a class="btn btn-line" href="#contact">Check your date</a>
+      <a class="ig-icon" href="https://instagram.com/jubileebee_events" target="_blank" rel="noopener" aria-label="Follow us on Instagram"><i class="ti ti-brand-instagram"></i></a>
     </nav>
   </div>
 </header>
@@ -577,6 +596,7 @@
         <h5>Enquire</h5>
         <a href="mailto:jingyang14@gmail.com">jingyang14@gmail.com</a>
         <a href="tel:+17787136988">(778) 713-6988</a>
+        <a href="https://instagram.com/jubileebee_events" target="_blank" rel="noopener"><i class="ti ti-brand-instagram"></i> @jubileebee_events</a>
         <p>Metro Vancouver &amp; Vancouver Island</p>
       </div>
     </div>
