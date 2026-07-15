@@ -273,15 +273,87 @@
   .glow .dot { width: 26px; height:26px; border-radius:50%; border:1px solid rgba(255,255,255,.35); }
   @media (max-width: 900px){ .mshow-grid{ grid-template-columns:1fr 1fr; } .mshow-grid img{ height: 340px; } .glow{ gap:18px; } }
 
-  /* ---------- CTA ---------- */
+  /* ---------- CTA with form (split layout) ---------- */
   .cta { background: var(--mocha-deep); color: #EFE6D9; text-align:center; padding: 110px 0; }
   .cta .script { color: var(--champagne); font-size: 44px; display:block; margin-bottom: 8px; }
   .cta h2 { color: var(--cream); font-size: clamp(38px,4.6vw,60px); }
   .cta p { max-width: 520px; margin: 20px auto 40px; color: #D9CDBD; font-size: 17px; }
+
+  .cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; text-align: left; }
+  .cta-info { padding-top: 8px; }
+  .cta-info .script { text-align: left; }
+  .cta-info h2 { text-align: left; margin-bottom: 18px; }
+  .cta-info p { text-align: left; margin: 0 0 32px; max-width: 460px; }
+  .cta-grid .cta-contact { justify-content: flex-start; margin-top: 28px; gap: 22px; }
+
+  .contact-form {
+    background: var(--ivory);
+    padding: 38px 36px 32px;
+    border-radius: var(--radius);
+    text-align: left;
+    box-shadow: 0 30px 80px -40px rgba(0,0,0,.4);
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .form-group { margin-bottom: 16px; }
+  .form-group label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--taupe);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 13px 14px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+    color: var(--mocha-deep);
+    font-weight: 300;
+    transition: border-color .2s, background .2s;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--champagne);
+    background: #fff;
+  }
+  .form-group input:invalid:not(:placeholder-shown) { border-color: #c89090; }
+  .form-group textarea {
+    resize: vertical;
+    min-height: 104px;
+    line-height: 1.6;
+  }
+  .contact-form .btn-full { width: 100%; justify-content: center; margin-top: 8px; }
+  .form-note {
+    font-size: 12px;
+    color: var(--taupe);
+    margin-top: 14px;
+    text-align: center;
+    letter-spacing: .02em;
+    line-height: 1.5;
+  }
+
   .cta-contact { display:flex; gap: 40px; justify-content:center; flex-wrap:wrap; margin-top: 44px; font-size: 13px; letter-spacing:.16em; text-transform:uppercase; }
   .cta-contact a { display:flex; align-items:center; gap:10px; color:#EFE6D9; }
   .cta-contact a:hover { color: var(--champagne); }
   .cta-contact i { color: var(--champagne); font-size:18px; }
+
+  @media (max-width: 900px){
+    .cta-grid { grid-template-columns: 1fr; gap: 48px; text-align: center; }
+    .cta-info .script, .cta-info h2, .cta-info p { text-align: center; }
+    .cta-info p { margin-left: auto; margin-right: auto; }
+    .cta-grid .cta-contact { justify-content: center; }
+  }
+  @media (max-width: 540px){
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+    .contact-form { padding: 30px 24px 26px; }
+  }
 
   /* ---------- FOOTER ---------- */
   footer { background: #2E2822; color: #B7ABA0; padding: 66px 0 30px; }
@@ -554,17 +626,48 @@
   </div>
 </section>
 
-<!-- CTA / CONTACT -->
+<!-- CTA / CONTACT (split layout: info left, form right) -->
 <section class="cta" id="contact">
   <div class="wrap">
-    <span class="script">Let's celebrate</span>
-    <h2>Ready to add a little buzz?</h2>
-    <p>Check your date and receive a free, no-obligation quote. We'd be honoured to be part of your day.</p>
-    <a class="btn btn-light" href="mailto:jingyang14@gmail.com?subject=Jubilee%20Bee%20Enquiry">Request your quote</a>
-    <div class="cta-contact">
-      <a href="mailto:jingyang14@gmail.com"><i class="ti ti-mail"></i> jingyang14@gmail.com</a>
-      <a href="tel:+17787136988"><i class="ti ti-phone"></i> (778) 713-6988</a>
-      <span style="color:#D9CDBD"><i class="ti ti-map-pin" style="color:var(--champagne)"></i> British Columbia, Canada</span>
+    <div class="cta-grid">
+      <div class="cta-info">
+        <span class="script">Let's celebrate</span>
+        <h2>Ready to add a little buzz?</h2>
+        <p>Share a few details and we'll get back to you within 24 hours with availability and a tailored quote. We'd be honoured to be part of your day.</p>
+        <div class="cta-contact">
+          <a href="mailto:jingyang14@gmail.com"><i class="ti ti-mail"></i> jingyang14@gmail.com</a>
+          <a href="tel:+17787136988"><i class="ti ti-phone"></i> (778) 713-6988</a>
+          <a href="https://instagram.com/jubileebee_events" target="_blank" rel="noopener"><i class="ti ti-brand-instagram"></i> jubileebee_events</a>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="Full name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="date">Wedding date</label>
+            <input type="date" id="date" name="date">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Tell us about your vision</label>
+          <textarea id="message" name="message" rows="4" placeholder="Share any details about your wedding style, special requests, or questions..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-solid btn-full">Send inquiry</button>
+        <p class="form-note">We typically respond within 24 hours. No obligation — just a friendly conversation about your day.</p>
+      </form>
     </div>
   </div>
 </section>
@@ -606,5 +709,45 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var form = document.getElementById('contactForm');
+  if (!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name    = document.getElementById('name').value.trim();
+    var email   = document.getElementById('email').value.trim();
+    var phone   = document.getElementById('phone').value.trim();
+    var date    = document.getElementById('date').value;
+    var message = document.getElementById('message').value.trim();
+
+    if (!name || !email) {
+      alert('Please fill in your name and email so we can get back to you.');
+      return;
+    }
+    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (!emailOk) {
+      alert('That email address doesn\'t look quite right — mind double-checking?');
+      return;
+    }
+
+    var subject = 'Jubilee Bee Enquiry from ' + name;
+    var body =
+      'Name: ' + name + '\n' +
+      'Email: ' + email + '\n' +
+      'Phone: ' + (phone || 'Not provided') + '\n' +
+      'Wedding date: ' + (date || 'Not provided') + '\n\n' +
+      'Message:\n' + (message || '(no additional details)');
+
+    var btn = form.querySelector('button[type="submit"]');
+    btn.textContent = 'Opening mail client…';
+    setTimeout(function(){ btn.textContent = 'Send inquiry'; }, 2500);
+
+    window.location.href =
+      'mailto:jingyang14@gmail.com?subject=' + encodeURIComponent(subject) +
+      '&body=' + encodeURIComponent(body);
+  });
+})();
+</script>
 </body>
 </html>
