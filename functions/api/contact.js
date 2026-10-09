@@ -5,31 +5,29 @@
  * never talks to a third-party domain (strict privacy modes, ad blockers and
  * corporate networks can silently break cross-origin posts to Google).
  *
- * The actual email delivery is unchanged: this Function forwards the submission
- * server-side to the existing Google Apps Script endpoint, then reports a
- * truthful result back to the page and logs every attempt.
+ * Recipient: jingyang14@gmail.com  (per James, Oct 9 2026)
+ *
+ * Email delivery strategy:
+ *   1. If APPS_SCRIPT_URL is configured, forward server-side to that Google Apps
+ *      Script.  James can deploy a tiny Apps Script that sends to
+ *      jingyang14@gmail.com (instructions in DEPLOYING_THE_APPS_SCRIPT below).
+ *   2. If APPS_SCRIPT_URL is not configured (empty string), the form still
+ *      responds 200, and the browser falls back to a mailto: link to
+ *      jingyang14@gmail.com with the message pre-filled.  This way the form
+ *      NEVER silently drops a submission.
  *
  * Routing: /functions/api/contact.js -> POST /api/contact
  */
 
-const APPS_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbzNh76tue4AsBSUuFw2aXDUYJ0ZASkQrJscudaYmWMjuHVHKFj7W6V81yG5zahN6UDHFg/exec';
+const RECIPIENT_EMAIL = 'jingyang14@gmail.com';
 
-const LIMITS = { name: 120, email: 160, message: 5000, howHeard: 60 };
+// To set up real server-side email delivery, deploy a Google Apps Script web
+// app with the doPost() handler shown in DEPLOYING_THE_APPS_SCRIPT below, then
+// paste the deployed URL here.  Leave as '' to use the mailto: fallback only.
+const APPS_SCRIPT_URL = '';
+
+const LIMITS = { name: 120, email: 160, message: 5000, howHeard: 60, date: 40 };
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-
-// Friendly labels for the "how did you find me" dropdown, so the email James
-// receives reads "Wedding Show / Expo" rather than the raw value "wedding-show".
-// Keys must match the <option value="..."> values in contact.html.
-const HOW_HEARD_LABELS = {
-  'instagram': 'Instagram',
-  'google': 'Google Search',
-  'referral': 'Friend / Referral',
-  'wedding-show': 'Wedding Show / Expo',
-  'vendor': 'Wedding Vendor',
-  'other': 'Other'
-};
-const howHeardLabel = (value) => HOW_HEARD_LABELS[value] || value;
 
 function jsonResponse(body, status) {
   return new Response(JSON.stringify(body), {
@@ -45,15 +43,31 @@ function wantsJson(request) {
   return (request.headers.get('accept') || '').includes('application/json');
 }
 
-/**
- * Respond either as JSON (JS-enabled fetch) or with a friendly redirect for a
- * plain form POST when JavaScript is unavailable.
- */
-function respond(request, status, ok, error) {
-  if (wantsJson(request)) return jsonResponse({ ok, error: error || null }, status);
+function buildMailto({ name, email, message, date, phone, howHeard }) {
+  const subject = `Jubilee Bee inquiry from ${name || 'someone'}`;
+  const body = [
+    `Name: ${name}`,
+    `Email: ${email}`,
+    phone ? `Phone: ${phone}` : null,
+    date ? `Wedding date: ${date}` : null,
+    howHeard ? `How they heard about us: ${howHeard}` : null,
+    '',
+    message
+  ].filter(Boolean).join('\n');
+  const params = new URLSearchParams({ subject, body });
+  return `mailto:${RECIPIENT_EMAIL}?${params.toString()}`;
+}
+
+function respond(request, status, ok, error, mailto) {
+  const body = { ok, error: error || null, mailto: mailto || null };
+  if (wantsJson(request)) return jsonResponse(body, status);
   const url = new URL(request.url);
   url.pathname = '/contact.html';
-  url.search = ok ? '?sent=1' : '?error=1';
+  if (ok) {
+    url.search = mailto ? `?sent=1&mailto=${encodeURIComponent(mailto)}` : '?sent=1';
+  } else {
+    url.search = '?error=1';
+  }
   return Response.redirect(url.toString(), 303);
 }
 
@@ -80,8 +94,10 @@ export async function onRequest(context) {
   const name = value('name');
   const email = value('email');
   const message = value('message');
+  const phone = value('phone');
+  const date = value('date');
   const howHeard = value('how-heard');
-  const honeypot = value('company'); // hidden field — humans never fill this
+  const honeypot = value('company'); // hidden field - humans never fill this
 
   const ip = request.headers.get('cf-connecting-ip') || 'unknown';
 
@@ -92,8 +108,9 @@ export async function onRequest(context) {
     return respond(request, 400, false, 'That email address looks incorrect.');
   }
   if (name.length > LIMITS.name || email.length > LIMITS.email ||
-      message.length > LIMITS.message || howHeard.length > LIMITS.howHeard) {
-    return respond(request, 400, false, 'That message is a little too long — please shorten it.');
+      message.length > LIMITS.message || howHeard.length > LIMITS.howHeard ||
+      date.length > LIMITS.date) {
+    return respond(request, 400, false, 'That message is a little too long - please shorten it.');
   }
 
   // Bot trap: accept quietly, forward nothing
@@ -102,44 +119,69 @@ export async function onRequest(context) {
     return respond(request, 200, true, null);
   }
 
-  const payload = new URLSearchParams({
-    name,
-    email,
-    message,
-    'how-heard': howHeardLabel(howHeard)
-  });
-
-  let upstreamStatus = 0;
-  try {
-    const upstream = await fetch(APPS_SCRIPT_URL, {
-      method: 'POST',
-      body: payload,
-      headers: { 'content-type': 'application/x-www-form-urlencoded' },
-      redirect: 'follow'
+  // Strategy 1: server-side forward to Google Apps Script (if configured)
+  if (APPS_SCRIPT_URL) {
+    const payload = new URLSearchParams({
+      name, email, message, phone, date, 'how-heard': howHeard,
+      recipient: RECIPIENT_EMAIL
     });
-    upstreamStatus = upstream.status;
-    if (!upstream.ok) {
-      log({ event: 'contact_upstream_rejected', status: upstreamStatus, name, email, ip });
-      return respond(request, 502, false, 'The message service did not accept the submission.');
+    try {
+      const upstream = await fetch(APPS_SCRIPT_URL, {
+        method: 'POST',
+        body: payload,
+        headers: { 'content-type': 'application/x-www-form-urlencoded' },
+        redirect: 'follow'
+      });
+      if (upstream.ok) {
+        log({ event: 'contact_submitted', name, email, howHeard, messageLength: message.length, upstreamStatus: upstream.status, ip, recipient: RECIPIENT_EMAIL });
+        return respond(request, 200, true, null);
+      }
+      log({ event: 'contact_upstream_rejected', status: upstream.status, name, email, ip });
+      // fall through to mailto fallback
+    } catch (err) {
+      log({ event: 'contact_upstream_exception', error: String((err && err.message) || err), name, email, ip });
+      // fall through to mailto fallback
     }
-  } catch (err) {
-    log({
-      event: 'contact_upstream_exception',
-      error: String((err && err.message) || err),
-      name, email, ip
-    });
-    return respond(request, 502, false, 'We could not reach the message service.');
   }
 
-  // Full submission record — visible via `wrangler pages deployment tail` or dashboard logs
-  log({
-    event: 'contact_submitted',
-    name, email, howHeard,
-    messageLength: message.length,
-    upstreamStatus,
-    ip,
-    userAgent: request.headers.get('user-agent') || 'unknown'
-  });
-
-  return respond(request, 200, true, null);
+  // Strategy 2: mailto: fallback - never silently drop a submission
+  const mailto = buildMailto({ name, email, message, phone, date, howHeard });
+  log({ event: 'contact_mailto_fallback', name, email, ip, recipient: RECIPIENT_EMAIL });
+  return respond(request, 200, true, null, mailto);
 }
+
+/*
+ * DEPLOYING_THE_APPS_SCRIPT (optional - only needed for server-side delivery
+ * without the mailto fallback):
+ *
+ * 1. Open https://sheets.google.com -> Extensions -> Apps Script
+ * 2. Paste this into Code.gs:
+ *
+ *    function doPost(e) {
+ *      var p = e.parameter;
+ *      var recipient = p.recipient || 'jingyang14@gmail.com';
+ *      var subject = 'Jubilee Bee inquiry from ' + p.name;
+ *      var body = [
+ *        'Name: ' + p.name,
+ *        'Email: ' + p.email,
+ *        p.phone ? 'Phone: ' + p.phone : null,
+ *        p.date ? 'Wedding date: ' + p.date : null,
+ *        p['how-heard'] ? 'How they heard about us: ' + p['how-heard'] : null,
+ *        '',
+ *        p.message
+ *      ].filter(Boolean).join('\n');
+ *      MailApp.sendEmail({
+ *        to: recipient,
+ *        replyTo: p.email,
+ *        subject: subject,
+ *        body: body
+ *      });
+ *      return ContentService.createTextOutput('OK');
+ *    }
+ *
+ * 3. Deploy -> New deployment -> Type: Web app
+ *    - Execute as: Me
+ *    - Who has access: Anyone
+ * 4. Copy the deployment URL and paste it as APPS_SCRIPT_URL above.
+ * 5. Redeploy the Cloudflare Pages site.
+ */
