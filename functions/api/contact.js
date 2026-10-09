@@ -1,30 +1,22 @@
 /**
  * POST /api/contact
  *
- * Receives the contact form submission on our own origin, so a visitor's browser
- * never talks to a third-party domain (strict privacy modes, ad blockers and
- * corporate networks can silently break cross-origin posts to Google).
+ * Receives the contact form submission on our own origin and forwards it
+ * server-side to Resend's API to send an email to jingyang14@gmail.com.
  *
- * Recipient: jingyang14@gmail.com  (per James, Oct 9 2026)
+ * No third-party domain is involved on the visitor's side, so privacy modes,
+ * ad blockers and corporate networks can't break the submission.
  *
- * Email delivery strategy:
- *   1. If APPS_SCRIPT_URL is configured, forward server-side to that Google Apps
- *      Script.  James can deploy a tiny Apps Script that sends to
- *      jingyang14@gmail.com (instructions in DEPLOYING_THE_APPS_SCRIPT below).
- *   2. If APPS_SCRIPT_URL is not configured (empty string), the form still
- *      responds 200, and the browser falls back to a mailto: link to
- *      jingyang14@gmail.com with the message pre-filled.  This way the form
- *      NEVER silently drops a submission.
+ * Sender: onboarding@resend.dev (until you verify jubileebee.com in Resend)
+ * Recipient: jingyang14@gmail.com
+ * Reply-To: the visitor's email (so replies go to the inquirer, not to Resend)
  *
  * Routing: /functions/api/contact.js -> POST /api/contact
  */
 
+const RESEND_API_URL = 'https://api.resend.com/emails';
 const RECIPIENT_EMAIL = 'jingyang14@gmail.com';
-
-// To set up real server-side email delivery, deploy a Google Apps Script web
-// app with the doPost() handler shown in DEPLOYING_THE_APPS_SCRIPT below, then
-// paste the deployed URL here.  Leave as '' to use the mailto: fallback only.
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzxspDtcVewEM17hxaPfSqOSEAVJsVzWGIWyObjF0dIcJrpIkBUw64j1q6TXB_aBkR-KA/exec';
+const SENDER_EMAIL = 'Jubilee Bee <onboarding@resend.dev>';
 
 const LIMITS = { name: 120, email: 160, message: 5000, howHeard: 60, date: 40 };
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -113,75 +105,66 @@ export async function onRequest(context) {
     return respond(request, 400, false, 'That message is a little too long - please shorten it.');
   }
 
-  // Bot trap: accept quietly, forward nothing
+  // Bot trap: accept quietly, send nothing
   if (honeypot) {
     log({ event: 'contact_blocked_honeypot', ip });
     return respond(request, 200, true, null);
   }
 
-  // Strategy 1: server-side forward to Google Apps Script (if configured)
-  if (APPS_SCRIPT_URL) {
-    const payload = new URLSearchParams({
-      name, email, message, phone, date, 'how-heard': howHeard,
-      recipient: RECIPIENT_EMAIL
-    });
-    try {
-      const upstream = await fetch(APPS_SCRIPT_URL, {
-        method: 'POST',
-        body: payload,
-        headers: { 'content-type': 'application/x-www-form-urlencoded' },
-        redirect: 'follow'
-      });
-      if (upstream.ok) {
-        log({ event: 'contact_submitted', name, email, howHeard, messageLength: message.length, upstreamStatus: upstream.status, ip, recipient: RECIPIENT_EMAIL });
-        return respond(request, 200, true, null);
-      }
-      log({ event: 'contact_upstream_rejected', status: upstream.status, name, email, ip });
-      // fall through to mailto fallback
-    } catch (err) {
-      log({ event: 'contact_upstream_exception', error: String((err && err.message) || err), name, email, ip });
-      // fall through to mailto fallback
-    }
+  // Build the email body
+  const textBody = [
+    `Name: ${name}`,
+    `Email: ${email}`,
+    phone ? `Phone: ${phone}` : null,
+    date ? `Wedding date: ${date}` : null,
+    howHeard ? `How they heard about us: ${howHeard}` : null,
+    '',
+    message
+  ].filter(Boolean).join('\n');
+
+  const subject = `Jubilee Bee inquiry from ${name}`;
+  const apiKey = context.env.RESEND_API_KEY;
+
+  if (!apiKey) {
+    log({ event: 'contact_no_api_key', ip });
+    // Fallback to mailto so the form still works for the visitor
+    const mailto = buildMailto({ name, email, message, phone, date, howHeard });
+    return respond(request, 200, true, null, mailto);
   }
 
-  // Strategy 2: mailto: fallback - never silently drop a submission
+  // Send via Resend
+  const resendPayload = {
+    from: SENDER_EMAIL,
+    to: RECIPIENT_EMAIL,
+    reply_to: email,
+    subject,
+    text: textBody
+  };
+
+  let upstreamStatus = 0;
+  try {
+    const upstream = await fetch(RESEND_API_URL, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(resendPayload)
+    });
+    upstreamStatus = upstream.status;
+    const respText = await upstream.text();
+    if (upstream.ok) {
+      log({ event: 'contact_sent', name, email, howHeard, messageLength: message.length, upstreamStatus, ip, recipient: RECIPIENT_EMAIL });
+      return respond(request, 200, true, null);
+    }
+    log({ event: 'contact_resend_rejected', status: upstreamStatus, name, email, response: respText[:500], ip });
+    // Fall through to mailto fallback
+  } catch (err) {
+    log({ event: 'contact_resend_exception', error: String((err && err.message) || err), name, email, ip });
+    // Fall through to mailto fallback
+  }
+
+  // mailto: fallback - never silently drop a submission
   const mailto = buildMailto({ name, email, message, phone, date, howHeard });
-  log({ event: 'contact_mailto_fallback', name, email, ip, recipient: RECIPIENT_EMAIL });
   return respond(request, 200, true, null, mailto);
 }
-
-/*
- * DEPLOYING_THE_APPS_SCRIPT (optional - only needed for server-side delivery
- * without the mailto fallback):
- *
- * 1. Open https://sheets.google.com -> Extensions -> Apps Script
- * 2. Paste this into Code.gs:
- *
- *    function doPost(e) {
- *      var p = e.parameter;
- *      var recipient = p.recipient || 'jingyang14@gmail.com';
- *      var subject = 'Jubilee Bee inquiry from ' + p.name;
- *      var body = [
- *        'Name: ' + p.name,
- *        'Email: ' + p.email,
- *        p.phone ? 'Phone: ' + p.phone : null,
- *        p.date ? 'Wedding date: ' + p.date : null,
- *        p['how-heard'] ? 'How they heard about us: ' + p['how-heard'] : null,
- *        '',
- *        p.message
- *      ].filter(Boolean).join('\n');
- *      MailApp.sendEmail({
- *        to: recipient,
- *        replyTo: p.email,
- *        subject: subject,
- *        body: body
- *      });
- *      return ContentService.createTextOutput('OK');
- *    }
- *
- * 3. Deploy -> New deployment -> Type: Web app
- *    - Execute as: Me
- *    - Who has access: Anyone
- * 4. Copy the deployment URL and paste it as APPS_SCRIPT_URL above.
- * 5. Redeploy the Cloudflare Pages site.
- */
