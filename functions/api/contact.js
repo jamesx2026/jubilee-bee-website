@@ -167,8 +167,7 @@ export async function onRequest(context) {
  *        p.phone ? 'Phone: ' + p.phone : null,
  *        p.date ? 'Wedding date: ' + p.date : null,
  *        p['how-heard'] ? 'How they heard about us: ' + p['how-heard'] : null,
- *        '',
- *        p.message
+ *        '',p.message
  *      ].filter(Boolean).join('\n');
  *      MailApp.sendEmail({
  *        to: recipient,
