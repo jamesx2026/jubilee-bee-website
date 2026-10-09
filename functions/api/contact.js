@@ -24,7 +24,7 @@ const RECIPIENT_EMAIL = 'jingyang14@gmail.com';
 // To set up real server-side email delivery, deploy a Google Apps Script web
 // app with the doPost() handler shown in DEPLOYING_THE_APPS_SCRIPT below, then
 // paste the deployed URL here.  Leave as '' to use the mailto: fallback only.
-const APPS_SCRIPT_URL = '';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzxspDtcVewEM17hxaPfSqOSEAVJsVzWGIWyObjF0dIcJrpIkBUw64j1q6TXB_aBkR-KA/exec';
 
 const LIMITS = { name: 120, email: 160, message: 5000, howHeard: 60, date: 40 };
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
