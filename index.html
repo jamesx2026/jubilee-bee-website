@@ -873,7 +873,7 @@
           <a href="https://instagram.com/jubileebee_events" target="_blank" rel="noopener"><i class="ti ti-brand-instagram"></i> jubileebee_events</a>
         </div>
       </div>
-      <form class="contact-form" id="contactForm" novalidate>
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/xeaekaqa" method="POST" novalidate>
         <div class="form-row">
           <div class="form-group">
             <label for="name">Your name</label>
@@ -944,41 +944,14 @@
 
 <script>
 (function(){
+  // Form submits directly to Formspree via form action.
+  // Show a quick "sending..." state on the button without preventing default,
+  // so the browser still navigates to Formspree's thank-you page.
   var form = document.getElementById('contactForm');
   if (!form) return;
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    var name    = document.getElementById('name').value.trim();
-    var email   = document.getElementById('email').value.trim();
-    var phone   = document.getElementById('phone').value.trim();
-    var date    = document.getElementById('date').value;
-    var message = document.getElementById('message').value.trim();
-
-    if (!name || !email) {
-      alert('Please fill in your name and email so we can get back to you.');
-      return;
-    }
-    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    if (!emailOk) {
-      alert('That email address doesn\'t look quite right — mind double-checking?');
-      return;
-    }
-
-    var subject = 'Jubilee Bee Enquiry from ' + name;
-    var body =
-      'Name: ' + name + '\n' +
-      'Email: ' + email + '\n' +
-      'Phone: ' + (phone || 'Not provided') + '\n' +
-      'Wedding date: ' + (date || 'Not provided') + '\n\n' +
-      'Message:\n' + (message || '(no additional details)');
-
+  form.addEventListener('submit', function(){
     var btn = form.querySelector('button[type="submit"]');
-    btn.textContent = 'Opening mail client…';
-    setTimeout(function(){ btn.textContent = 'Send inquiry'; }, 2500);
-
-    window.location.href =
-      'mailto:jingyang14@gmail.com?subject=' + encodeURIComponent(subject) +
-      '&body=' + encodeURIComponent(body);
+    if (btn) btn.textContent = 'Sending...';
   });
 })();
 </script>
