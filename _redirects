@@ -13,3 +13,10 @@
 # 308-redirect it to the extensionless URL. This rewrite serves it in
 # place with a 200 so the bytes are read with no hop.
 /googlee5120ba0c0a64b12.html  /googlee5120ba0c0a64b12  200
+
+# Stale wrangler cache files. These were committed once by accident (added in
+# 74504cf, removed from the repo in a620031) but a copy can still be served
+# from the edge, leaking the Cloudflare account id. Redirect them to a path
+# that does not exist so they resolve to the branded 404 with a 404 status
+# instead of returning the file contents.
+/.wrangler/*  /__not_found__  301
