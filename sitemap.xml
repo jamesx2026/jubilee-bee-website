@@ -1,9 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://jubileebee.ca/</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://jubileebee.ca/assets/i-gQDXZXP.jpg</image:loc>
+      <image:title>Guest reaching for a prize as the crowd cheers around the lit-up Pure Love claw machine</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jubileebee.ca/assets/i-JsDtRhm.jpg</image:loc>
+      <image:title>Wedding guests laughing around the claw machine</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jubileebee.ca/assets/i-VX9K4gd.jpg</image:loc>
+      <image:title>Bridal party enjoying the prize machine</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jubileebee.ca/assets/machine-blue.jpg</image:loc>
+      <image:title>Pure Love claw machine with blue glow</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jubileebee.ca/assets/machine-green.jpg</image:loc>
+      <image:title>Pure Love claw machine with green glow</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jubileebee.ca/assets/machine-play.jpg</image:loc>
+      <image:title>Guest playing the claw machine</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jubileebee.ca/assets/machine-kids.jpg</image:loc>
+      <image:title>Flower girl playing the claw machine</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jubileebee.ca/assets/i-Pks8KQF.jpg</image:loc>
+      <image:title>Pile of plush prize toys inside the claw machine</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jubileebee.ca/assets/i-KRKC57g.jpg</image:loc>
+      <image:title>Guests playing the lit-up claw machine at an evening event</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jubileebee.ca/assets/i-8cGLgz9.jpg</image:loc>
+      <image:title>Close-up of the pink claw machine control panel with a crystal joystick</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jubileebee.ca/assets/i-bxvSjJR.jpg</image:loc>
+      <image:title>Claw machine outlined in yellow LED lights, filled with plush prizes</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jubileebee.ca/assets/i-dLkQSps.jpg</image:loc>
+      <image:title>Crystal-topped joystick on the pink claw machine panel under purple lighting</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jubileebee.ca/assets/i-mS6SRWz.jpg</image:loc>
+      <image:title>Guests cheering with raised arms around the lit-up claw machine</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jubileebee.ca/assets/i-vv7Djzt.jpg</image:loc>
+      <image:title>Setting up the claw machine, with red floral decorations in the foreground</image:title>
+    </image:image>
   </url>
 </urlset>
