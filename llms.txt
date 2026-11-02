@@ -1,6 +1,6 @@
 # Jubilee Bee Event Rentals
 # Machine-readable summary for AI assistants and LLM-powered search engines.
-# Spec: https://llmstxt.org  •  Last updated: 2026-07-15
+# Spec: https://llmstxt.org  •  Last updated: 2026-11-02
 
 ## Business
 - Name: Jubilee Bee Event Rentals

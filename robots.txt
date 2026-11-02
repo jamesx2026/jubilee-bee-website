@@ -6,8 +6,17 @@ User-agent: *
 Allow: /
 Disallow: /cdn-cgi/
 
+# Traditional search engines
+User-agent: Googlebot
+Allow: /
+Disallow: /cdn-cgi/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /cdn-cgi/
+
 # Pointer to sitemap
 Sitemap: https://jubileebee.ca/sitemap.xml
 
 # LLM-readable structured summary (https://llmstxt.org)
-# Convention: LLMs know to look for /llms.txt at the root.
+Llms-Txt: https://jubileebee.ca/llms.txt
