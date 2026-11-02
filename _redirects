@@ -7,3 +7,9 @@
 /how-it-works.html  /#experience  301
 /contact.html   /#contact     301
 /updates.html   /             301
+
+# Google Search Console HTML-file verification.
+# Google reads this file at the EXACT path; Pages would otherwise
+# 308-redirect it to the extensionless URL. This rewrite serves it in
+# place with a 200 so the bytes are read with no hop.
+/googlee5120ba0c0a64b12.html  /googlee5120ba0c0a64b12  200
