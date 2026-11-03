@@ -1,0 +1,296 @@
+{
+  "format": "ai-dataset",
+  "formatVersion": "1.0",
+  "name": "Jubilee Bee Event Rentals",
+  "alternateNames": [
+    "Jubilee Bee"
+  ],
+  "canonicalUrl": "https://jubileebee.ca/",
+  "lastUpdated": "2026-11-03",
+  "description": "Claw machine rentals for weddings and events across British Columbia — premium plush prizes, a professional booth attendant, and full delivery, setup and breakdown.",
+  "provenance": {
+    "primarySource": "Visible page content at https://jubileebee.ca/",
+    "secondarySource": "The site's own JSON-LD structured data (LocalBusiness, Service, Organization, Person, FAQPage)",
+    "note": "Where the page and the structured data differ, this dataset follows the visible page. Fields taken only from structured data are marked with a source key. Where the page states nothing (prices, opening hours), this dataset states nothing either."
+  },
+  "business": {
+    "name": "Jubilee Bee Event Rentals",
+    "legalName": null,
+    "type": "Event entertainment rental service",
+    "service": "Wedding and event claw machine rentals",
+    "tagline": "A little buzz for every celebration",
+    "priceRange": "$$$",
+    "founded": {
+      "value": "2024",
+      "source": "Organization JSON-LD foundingDate"
+    },
+    "founder": {
+      "name": "Gillian Yang",
+      "jobTitle": "Founder",
+      "source": "Person JSON-LD"
+    },
+    "basedIn": "British Columbia, Canada"
+  },
+  "contact": {
+    "email": "jingyang14@gmail.com",
+    "phone": {
+      "display": "+1-778-713-6988",
+      "international": "+1-778-713-6988"
+    },
+    "instagram": "https://instagram.com/jubileebee_events",
+    "googleBusinessProfile": "https://www.google.com/maps?cid=4042971398943462821",
+    "responseTime": "We typically respond within 24 hours. No obligation — just a friendly conversation about your day.",
+    "contactForm": {
+      "method": "POST",
+      "action": "https://formspree.io/f/xeaekaqa",
+      "fields": [
+        {
+          "name": "name",
+          "label": "Your name",
+          "type": "text",
+          "placeholder": "Full name"
+        },
+        {
+          "name": "email",
+          "label": "Email",
+          "type": "email",
+          "placeholder": "your@email.com"
+        },
+        {
+          "name": "phone",
+          "label": "Phone",
+          "type": "tel",
+          "placeholder": "(000) 000-0000"
+        },
+        {
+          "name": "date",
+          "label": "Wedding date",
+          "type": "date"
+        },
+        {
+          "name": "message",
+          "label": "Tell us about your vision",
+          "type": "textarea",
+          "placeholder": "Share any details about your wedding style, special requests, or questions..."
+        }
+      ]
+    }
+  },
+  "serviceArea": {
+    "cities": [
+      "Vancouver",
+      "Surrey",
+      "Richmond",
+      "Burnaby",
+      "Victoria"
+    ],
+    "regions": [
+      "Metro Vancouver",
+      "Vancouver Island",
+      "British Columbia"
+    ],
+    "statement": "We serve Vancouver, Surrey, Richmond, Burnaby and Victoria, plus Vancouver Island and events anywhere in British Columbia — including destination events further afield. Travel arrangements can be made for locations across the province."
+  },
+  "offerings": [
+    {
+      "name": "Premium",
+      "for": "Intimate gatherings",
+      "includes": [
+        "Unlimited plays, up to 4 hours",
+        "Curated selection of plush prizes",
+        "Professional booth attendant",
+        "Delivery, setup & breakdown"
+      ],
+      "pricing": "Pricing on enquiry"
+    },
+    {
+      "name": "Signature",
+      "for": "Full-scale events",
+      "badge": "Most loved",
+      "includes": [
+        "Unlimited plays, up to 5 hours",
+        "Unlimited plush prizes",
+        "Professional booth attendant",
+        "Delivery, setup & breakdown",
+        "Priority date booking"
+      ],
+      "pricing": "Pricing on enquiry"
+    },
+    {
+      "name": "Bespoke",
+      "for": "Parties & celebrations",
+      "includes": [
+        "Tailored hours & prize count",
+        "Custom plush themes",
+        "Branded machine styling",
+        "Multi-machine options"
+      ],
+      "pricing": "Fully tailored to you — request a quote"
+    }
+  ],
+  "includedWithEveryCollection": [
+    "The machine",
+    "Premium plush prizes",
+    "A professional booth attendant",
+    "Delivery, setup and breakdown"
+  ],
+  "occasions": [
+    "Weddings",
+    "Engagements",
+    "Birthdays",
+    "Anniversaries",
+    "Corporate",
+    "Galas"
+  ],
+  "machine": {
+    "name": "Pure Love",
+    "description": "Our custom \"Pure Love\" machine is a showpiece in its own right — and its glow can be set to match your palette, from soft blush to romantic gold.",
+    "glowOptions": [
+      "Blush",
+      "Gold",
+      "Sapphire",
+      "Emerald",
+      "Ruby"
+    ]
+  },
+  "faq": [
+    {
+      "question": "What areas do you serve?",
+      "answer": "We serve Vancouver, Surrey, Richmond, Burnaby and Victoria, plus Vancouver Island and events anywhere in British Columbia — including destination events further afield. Travel arrangements can be made for locations across the province."
+    },
+    {
+      "question": "How far in advance should I book?",
+      "answer": "Most couples book us 6 months to a year ahead of their wedding date. Popular dates fill up quickly, so reaching out early gives you the best chance of securing your preferred date."
+    },
+    {
+      "question": "What’s included in each collection?",
+      "answer": "Every collection includes the machine, premium plush prizes, a professional booth attendant, delivery, setup, and breakdown. The Signature collection adds unlimited plush prizes and priority date booking; Bespoke is fully tailored to your event."
+    },
+    {
+      "question": "Do you handle delivery and setup?",
+      "answer": "Yes — full delivery, setup, and breakdown are included with every collection. We typically arrive 1–2 hours before your event starts to get everything in place."
+    }
+  ],
+  "reviews": [
+    {
+      "quote": "The hit of our reception. Guests of every age were crowded around it laughing — it truly made the night.",
+      "author": "Sarah & Michael",
+      "location": "Surrey",
+      "rating": 5
+    },
+    {
+      "quote": "So elegant and professional. The attendant was wonderful and the plushies were adorable. Everyone is still talking about it.",
+      "author": "Jenny & Alex",
+      "location": "Richmond",
+      "rating": 5
+    },
+    {
+      "quote": "Booking was effortless and setup was flawless. It gave our day something unique that everyone remembered.",
+      "author": "Priya & Dev",
+      "location": "Vancouver",
+      "rating": 5
+    }
+  ],
+  "trustHighlights": [
+    "Metro Vancouver & the Island",
+    "Premium plush keepsakes",
+    "Attendant & full setup",
+    "Loved by 200+ celebrations"
+  ],
+  "announcement": "Now booking 2027 & 2028 events across British Columbia",
+  "media": [
+    {
+      "file": "/assets/i-gQDXZXP.jpg",
+      "alt": "Guest reaching for a prize as the crowd cheers around the lit-up Pure Love claw machine",
+      "caption": null
+    },
+    {
+      "file": "/assets/machine-blue.jpg",
+      "alt": "Pure Love claw machine with blue glow",
+      "caption": "Sapphire glow"
+    },
+    {
+      "file": "/assets/machine-green.jpg",
+      "alt": "Pure Love claw machine with green glow",
+      "caption": "Emerald glow"
+    },
+    {
+      "file": "/assets/machine-play.jpg",
+      "alt": "Guest playing the claw machine",
+      "caption": "In play"
+    },
+    {
+      "file": "/assets/machine-kids.jpg",
+      "alt": "Flower girl playing the claw machine",
+      "caption": "All ages welcome"
+    },
+    {
+      "file": "/assets/i-JsDtRhm.jpg",
+      "alt": "Wedding guests laughing around the claw machine",
+      "caption": null
+    },
+    {
+      "file": "/assets/i-VX9K4gd.jpg",
+      "alt": "Bridal party enjoying the prize machine",
+      "caption": null
+    },
+    {
+      "file": "/assets/i-Pks8KQF.jpg",
+      "alt": "Pile of plush prize toys inside the claw machine",
+      "caption": null
+    },
+    {
+      "file": "/assets/i-KRKC57g.jpg",
+      "alt": "Guests playing the lit-up claw machine at an evening event",
+      "caption": null
+    },
+    {
+      "file": "/assets/i-8cGLgz9.jpg",
+      "alt": "Close-up of the pink claw machine control panel with a crystal joystick",
+      "caption": null
+    },
+    {
+      "file": "/assets/i-bxvSjJR.jpg",
+      "alt": "Claw machine outlined in yellow LED lights, filled with plush prizes",
+      "caption": null
+    },
+    {
+      "file": "/assets/i-dLkQSps.jpg",
+      "alt": "Crystal-topped joystick on the pink claw machine panel under purple lighting",
+      "caption": null
+    },
+    {
+      "file": "/assets/i-mS6SRWz.jpg",
+      "alt": "Guests cheering with raised arms around the lit-up claw machine",
+      "caption": null
+    },
+    {
+      "file": "/assets/i-vv7Djzt.jpg",
+      "alt": "Setting up the claw machine, with red floral decorations in the foreground",
+      "caption": null
+    }
+  ],
+  "about": {
+    "statement": "Jubilee Bee began with a simple belief: the most joyful celebrations are the ones where everyone gets to play. We bring a beautifully styled claw machine — stocked with premium plush prizes — right to your venue.",
+    "footprint": "Based in British Columbia, we serve Metro Vancouver, Vancouver Island and beyond, handling every detail from delivery to breakdown so you can stay fully in the moment.",
+    "signoff": "With love, Jubilee Bee"
+  },
+  "booking": {
+    "leadTime": "Most couples book us 6 months to a year ahead of their wedding date. Popular dates fill up quickly, so reaching out early gives you the best chance of securing your preferred date.",
+    "setupArrival": "We typically arrive 1–2 hours before your event starts to get everything in place."
+  },
+  "relatedFiles": [
+    {
+      "url": "https://jubileebee.ca/llms.txt",
+      "label": "Concise AI-readable summary"
+    },
+    {
+      "url": "https://jubileebee.ca/llms-full.txt",
+      "label": "Full site content in markdown"
+    },
+    {
+      "url": "https://jubileebee.ca/",
+      "label": "Homepage"
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+# Jubilee Bee Event Rentals — Full Site Content
+
+> The complete text of https://jubileebee.ca/ transcribed into markdown, for AI assistants and LLM-powered search engines.
+>
+> Every value below is copied from the visible page. Nothing has been inferred, embellished, or added. For a concise overview see /llms.txt; for the same content as structured JSON see /ai-dataset.json.
+
+Last updated: 2026-11-03
+Canonical URL: https://jubileebee.ca/
+
+## Navigation
+
+- Experience — https://jubileebee.ca/#experience
+- Collections — https://jubileebee.ca/#packages
+- Gallery — https://jubileebee.ca/#gallery
+- Our story — https://jubileebee.ca/#about
+- FAQ — https://jubileebee.ca/#faq
+- Enquire — https://jubileebee.ca/#contact
+
+## Announcement bar
+
+Now booking 2027 & 2028 events across British Columbia.
+
+## Hero
+
+- Eyebrow: Claw machine rentals for weddings & events
+- Headline: A little buzz for every celebration
+- Sub: An elegant, interactive keepsake experience for weddings, parties & every occasion — premium plush prizes your guests win, and take home to remember the day.
+- Primary button: Request a quote
+- Secondary button: View collections
+- Hero image alt: Guest reaching for a prize as the crowd cheers around the lit-up Pure Love claw machine
+
+Trust bar: Metro Vancouver & the Island · Premium plush keepsakes · Attendant & full setup · Loved by 200+ celebrations
+
+## The experience
+
+Section heading: Entertainment your guests will remember
+
+Intro: From the flower girl to grandpa, everyone gathers around — laughing, cheering, and walking away with a little something to keep.
+
+Occasions served: Weddings · Engagements · Birthdays · Anniversaries · Corporate · Galas
+
+### 01 Effortless joy — A moment that brings everyone together
+
+There's a magic in the crowd that forms around the machine — the cheers when the claw drops, the gasps, the shared laughter. It's the kind of candid delight your photographer will love.
+
+We tuck it beautifully into your floor plan so it complements your décor, never competes with it.
+
+### 02 Keepsakes, not clutter — Prizes your guests actually treasure
+
+We stock the machine with curated, high-quality plush toys — the kind of keepsake guests genuinely want to take home. A sweeter, more memorable alternative to the usual party favour.
+
+Custom themes and colours available to match your palette.
+
+## Our signature machine
+
+Section heading: The centrepiece guests gather around
+
+Our custom "Pure Love" machine is a showpiece in its own right — and its glow can be set to match your palette, from soft blush to romantic gold.
+
+Choose your glow to match your palette.
+
+Glow options: Blush · Gold · Sapphire · Emerald · Ruby
+
+- Sapphire glow — https://jubileebee.ca/assets/machine-blue.jpg
+- Emerald glow — https://jubileebee.ca/assets/machine-green.jpg
+- In play — https://jubileebee.ca/assets/machine-play.jpg
+- All ages welcome — https://jubileebee.ca/assets/machine-kids.jpg
+
+## Fully taken care of
+
+Section heading: White-glove, from arrival to farewell
+
+- Premium prizes: Curated, wedding-worthy plush toys guests take home as keepsakes.
+- Booth attendant: A friendly, professional attendant keeps the fun flowing all evening.
+- Elegant styling: A refined machine that blends seamlessly with your reception aesthetic.
+- Full service: Delivery, setup and breakdown included — you simply enjoy the day.
+
+## Collections
+
+Section heading: Thoughtful, all-inclusive collections
+
+Every collection includes the machine, premium plush prizes, a booth attendant, and full delivery & setup. Tell us about your event and we'll tailor a quote to match.
+
+### Premium
+
+- For: Intimate gatherings
+- Unlimited plays, up to 4 hours
+- Curated selection of plush prizes
+- Professional booth attendant
+- Delivery, setup & breakdown
+- Pricing on enquiry
+
+### Signature
+
+- For: Full-scale events
+- Badge: Most loved
+- Unlimited plays, up to 5 hours
+- Unlimited plush prizes
+- Professional booth attendant
+- Delivery, setup & breakdown
+- Priority date booking
+- Pricing on enquiry
+
+### Bespoke
+
+- For: Parties & celebrations
+- Tailored hours & prize count
+- Custom plush themes
+- Branded machine styling
+- Multi-machine options
+- Fully tailored to you — request a quote
+
+## Real celebrations
+
+Section heading: The joy, captured
+
+- Pile of plush prize toys inside the claw machine — https://jubileebee.ca/assets/i-Pks8KQF.jpg
+- Guests playing the lit-up claw machine at an evening event — https://jubileebee.ca/assets/i-KRKC57g.jpg
+- Close-up of the pink claw machine control panel with a crystal joystick — https://jubileebee.ca/assets/i-8cGLgz9.jpg
+- Claw machine outlined in yellow LED lights, filled with plush prizes — https://jubileebee.ca/assets/i-bxvSjJR.jpg
+- Crystal-topped joystick on the pink claw machine panel under purple lighting — https://jubileebee.ca/assets/i-dLkQSps.jpg
+- Guests cheering with raised arms around the lit-up claw machine — https://jubileebee.ca/assets/i-mS6SRWz.jpg
+- Setting up the claw machine, with red floral decorations in the foreground — https://jubileebee.ca/assets/i-vv7Djzt.jpg
+- Wedding guests laughing around the claw machine — https://jubileebee.ca/assets/i-JsDtRhm.jpg
+- Bridal party enjoying the prize machine — https://jubileebee.ca/assets/i-VX9K4gd.jpg
+
+## Kind words
+
+Section heading: Loved by hosts & their guests
+
+- "The hit of our reception. Guests of every age were crowded around it laughing — it truly made the night." — Sarah & Michael · Surrey (5/5)
+- "So elegant and professional. The attendant was wonderful and the plushies were adorable. Everyone is still talking about it." — Jenny & Alex · Richmond (5/5)
+- "Booking was effortless and setup was flawless. It gave our day something unique that everyone remembered." — Priya & Dev · Vancouver (5/5)
+
+## Our story
+
+Section heading: A sweeter way to celebrate
+
+Jubilee Bee began with a simple belief: the most joyful celebrations are the ones where everyone gets to play. We bring a beautifully styled claw machine — stocked with premium plush prizes — right to your venue.
+
+Based in British Columbia, we serve Metro Vancouver, Vancouver Island and beyond, handling every detail from delivery to breakdown so you can stay fully in the moment.
+
+With love, Jubilee Bee
+
+## Common questions
+
+Section heading: Frequently asked
+
+Everything you need to know before booking your claw machine experience.
+
+### What areas do you serve?
+
+We serve Vancouver, Surrey, Richmond, Burnaby and Victoria, plus Vancouver Island and events anywhere in British Columbia — including destination events further afield. Travel arrangements can be made for locations across the province.
+
+### How far in advance should I book?
+
+Most couples book us 6 months to a year ahead of their wedding date. Popular dates fill up quickly, so reaching out early gives you the best chance of securing your preferred date.
+
+### What's included in each collection?
+
+Every collection includes the machine, premium plush prizes, a professional booth attendant, delivery, setup, and breakdown. The Signature collection adds unlimited plush prizes and priority date booking; Bespoke is fully tailored to your event.
+
+### Do you handle delivery and setup?
+
+Yes — full delivery, setup, and breakdown are included with every collection. We typically arrive 1–2 hours before your event starts to get everything in place.
+
+## Let's celebrate
+
+Section heading: Ready to add a little buzz?
+
+Share a few details and we'll get back to you within 24 hours with availability and a tailored quote. We'd be honoured to be part of your day.
+
+- Email: jingyang14@gmail.com
+- Phone: +1-778-713-6988
+- Instagram: https://instagram.com/jubileebee_events
+- Google Business Profile: https://www.google.com/maps?cid=4042971398943462821
+
+Contact form fields: Your name (Full name) · Email (your@email.com) · Phone ((000) 000-0000) · Wedding date (date) · Tell us about your vision (Share any details about your wedding style, special requests, or questions...)
+
+Form note: We typically respond within 24 hours. No obligation — just a friendly conversation about your day.
+
+## Footer
+
+Jubilee Bee — Claw machine rentals that bring joy and keepsakes to weddings, parties & celebrations across British Columbia.
+
+Metro Vancouver & Vancouver Island
+
+© 2026 Jubilee Bee. All rights reserved.
+Made with love in British Columbia

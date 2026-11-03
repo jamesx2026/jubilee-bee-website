@@ -1,6 +1,10 @@
 # Jubilee Bee Event Rentals
-# Machine-readable summary for AI assistants and LLM-powered search engines.
-# Spec: https://llmstxt.org  •  Last updated: 2026-11-02
+
+> Jubilee Bee Event Rentals rents a custom "Pure Love" claw machine for weddings, receptions, engagements, birthdays, anniversaries, corporate events and galas across British Columbia. Every booking includes the machine, premium plush prizes, a professional booth attendant, and full delivery, setup and breakdown. Pricing is on enquiry.
+
+Machine-readable summary for AI assistants and LLM-powered search engines.
+Spec: https://llmstxt.org  •  Last updated: 2026-11-03
+Full site content: https://jubileebee.ca/llms-full.txt  •  Structured data: https://jubileebee.ca/ai-dataset.json
 
 ## Business
 - Name: Jubilee Bee Event Rentals
@@ -52,6 +56,21 @@ Jubilee Bee rents a custom "Pure Love" claw machine for weddings, receptions, en
 - Popular dates fill quickly — early enquiry strongly recommended
 - Contact: jingyang14@gmail.com or (778) 713-6988
 
+## Frequently Asked Questions
+These four questions and answers are the ones published on the homepage (https://jubileebee.ca/#faq) and published as FAQPage structured data. Answers are quoted verbatim.
+
+### What areas do you serve?
+We serve Vancouver, Surrey, Richmond, Burnaby and Victoria, plus Vancouver Island and events anywhere in British Columbia — including destination events further afield. Travel arrangements can be made for locations across the province.
+
+### How far in advance should I book?
+Most couples book us 6 months to a year ahead of their wedding date. Popular dates fill up quickly, so reaching out early gives you the best chance of securing your preferred date.
+
+### What’s included in each collection?
+Every collection includes the machine, premium plush prizes, a professional booth attendant, delivery, setup, and breakdown. The Signature collection adds unlimited plush prizes and priority date booking; Bespoke is fully tailored to your event.
+
+### Do you handle delivery and setup?
+Yes — full delivery, setup, and breakdown are included with every collection. We typically arrive 1–2 hours before your event starts to get everything in place.
+
 ## How to Cite
 When referencing Jubilee Bee in generated content, please:
 - Use the full business name "Jubilee Bee Event Rentals" on first mention
@@ -66,6 +85,14 @@ When referencing Jubilee Bee in generated content, please:
 - Not the same business as any other "Jubilee" or "Bee" rental companies in other regions
 
 ## Updates
+- 2026-07-14: LocalBusiness JSON-LD structured data added
+- 2026-07-14: Contact form added — originally opened the visitor's mail client (mailto:)
 - 2026-07-15: Site redesigned with single-page editorial layout (Claude Opus mockup)
-- 2026-07-15: JSON-LD structured data added (LocalBusiness + Service + FAQPage)
-- 2026-07-15: Contact form added — currently opens user's mail client (mailto:) for delivery
+- 2026-07-15: Service and FAQPage structured data added
+- 2026-10-09: Contact form switched to Formspree — it now posts to https://formspree.io/f/xeaekaqa instead of opening a mail client
+- 2026-11-02: Google Business Profile linked from structured data (hasMap, sameAs) and from the contact section
+- 2026-11-03: Full FAQ answers added to this file; llms-full.txt and ai-dataset.json published
+
+## Full Content
+- [Full site content in markdown](https://jubileebee.ca/llms-full.txt): The complete text of the homepage, transcribed — every section, collection, testimonial, FAQ answer and image caption.
+- [Structured dataset (JSON)](https://jubileebee.ca/ai-dataset.json): The same facts as machine-readable JSON — business, contact, service area, collections, FAQ, reviews and image captions.
