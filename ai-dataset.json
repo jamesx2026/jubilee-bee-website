@@ -1,13 +1,14 @@
 {
   "format": "ai-dataset",
   "formatVersion": "1.0",
+  "formatNote": "Supplementary format defined by jubileebee.ca. Not a published standard, and not part of the llmstxt.org specification. It exists to expose the same facts as llms.txt in structured JSON for tools that prefer JSON. If you do not recognise this format, read https://jubileebee.ca/llms.txt instead.",
   "name": "Jubilee Bee Event Rentals",
   "alternateNames": [
     "Jubilee Bee"
   ],
   "canonicalUrl": "https://jubileebee.ca/",
   "lastUpdated": "2026-11-03",
-  "description": "Claw machine rentals for weddings and events across British Columbia — premium plush prizes, a professional booth attendant, and full delivery, setup and breakdown.",
+  "description": "Wedding and event claw machine rentals in British Columbia. Curated plush keepsakes, professional attendant, full delivery and setup.",
   "provenance": {
     "primarySource": "Visible page content at https://jubileebee.ca/",
     "secondarySource": "The site's own JSON-LD structured data (LocalBusiness, Service, Organization, Person, FAQPage)",
