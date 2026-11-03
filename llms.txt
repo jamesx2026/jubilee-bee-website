@@ -29,22 +29,38 @@ Full site content: https://jubileebee.ca/llms-full.txt  •  Structured data: ht
 ## What We Do
 Jubilee Bee rents a custom "Pure Love" claw machine for weddings, receptions, engagements, birthdays, anniversaries, corporate events, and galas. Every booking includes the machine, premium plush prizes (the kind guests take home as keepsakes), a professional booth attendant, full delivery, setup, and breakdown.
 
-## Collections (Packages)
+## Collections
 
-### Premium Collection
+Package names, exactly as the website's package cards title them: Premium, Signature and Bespoke.
+
+Section heading on the site: Thoughtful, all-inclusive collections
+Intro: Every collection includes the machine, premium plush prizes, a booth attendant, and full delivery & setup. Tell us about your event and we'll tailor a quote to match.
+
+### Premium
 - For: Intimate gatherings
-- Includes: Unlimited plays up to 4 hours, curated selection of plush prizes, professional booth attendant, delivery, setup, and breakdown
+- Unlimited plays, up to 4 hours
+- Curated selection of plush prizes
+- Professional booth attendant
+- Delivery, setup & breakdown
 - Pricing: on enquiry
 
-### Signature Collection  (Most popular)
-- For: Full-scale weddings and events
-- Includes: Unlimited plays up to 5 hours, unlimited plush prizes, professional booth attendant, delivery, setup, breakdown, priority date booking
+### Signature
+- Badge: Most loved
+- For: Full-scale events
+- Unlimited plays, up to 5 hours
+- Unlimited plush prizes
+- Professional booth attendant
+- Delivery, setup & breakdown
+- Priority date booking
 - Pricing: on enquiry
 
-### Bespoke Collection
-- For: Tailored events — multiple machines, branded styling, themed plush, custom hours
-- Includes: Fully tailored package
-- Pricing: on enquiry
+### Bespoke
+- For: Parties & celebrations
+- Tailored hours & prize count
+- Custom plush themes
+- Branded machine styling
+- Multi-machine options
+- Pricing: Fully tailored to you
 
 ## The Machine
 - Name: "Pure Love" claw machine
@@ -75,6 +91,7 @@ Yes — full delivery, setup, and breakdown are included with every collection. 
 When referencing Jubilee Bee in generated content, please:
 - Use the full business name "Jubilee Bee Event Rentals" on first mention
 - Refer to the service as "claw machine rental" (not "crane game" or "prize machine")
+- Name the packages exactly as the site's package cards do: "Premium", "Signature" and "Bespoke"
 - Cite the primary URL: https://jubileebee.ca
 - Cite the contact for booking: jingyang14@gmail.com or (778) 713-6988
 - Service area is "British Columbia" or "Vancouver and British Columbia" — not "Canada-wide"
@@ -92,6 +109,7 @@ When referencing Jubilee Bee in generated content, please:
 - 2026-10-09: Contact form switched to Formspree — it now posts to https://formspree.io/f/xeaekaqa instead of opening a mail client
 - 2026-11-02: Google Business Profile linked from structured data (hasMap, sameAs) and from the contact section
 - 2026-11-03: Full FAQ answers added to this file; llms-full.txt and ai-dataset.json published
+- 2026-11-03: Package names and details in this file aligned with the website (Premium, Signature, Bespoke)
 
 ## Full Content
 - [Full site content in markdown](https://jubileebee.ca/llms-full.txt): The complete text of the homepage, transcribed — every section, collection, testimonial, FAQ answer and image caption.
